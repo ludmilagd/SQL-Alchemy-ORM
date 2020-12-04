@@ -35,15 +35,12 @@ def welcome():
     """List all available api routes."""
     
     return (
-        "<h1>baaaaa</h1>"
-        f"/api/v1.0/precipitation"
-        f"api/v1.0/stations"
-        f"/api/v1.0/tobs"
-        f"//api/v1.0/<start>"
-        f"/api/v1.0/<start>/<end>"
+        f"/api/v1.0/precipitation <br>"
+        f"api/v1.0/stations <br>"
+        f"/api/v1.0/tobs <br>"
+        f"//api/v1.0/<start> <br>"
+        f"/api/v1.0/<start>/<end> <br>"
     )
-
-hello_dic= {"prep":"date"}
 
 @app.route("/api/v1.0/precipitation")
 
@@ -102,20 +99,34 @@ def tobs():
     )
 
 
-@app.route("/api/v1.0/<start>")
+@app.route("/api/v1.0/start/<start>")
 
-def startapp():
+def calc_temps(start):
+    session = Session(engine)
+    
+    results6= session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).\
+        filter(Measurement.date >= start).all()
+
+    session.close()
+
+    return (
+        jsonify(results6)
+    )
+@app.route("/api/v1.0/start_end/<start>/<end>")
+
+def start_end(start,end):
 
     session = Session(engine)
-    results4=session.query(Measurement.date,Measurement.tobs).filter(Measurement.station== 'USC00519523').filter(Measurement.date>=('2017,8,23')).all()
+    
+    results7= session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).\
+        filter(Measurement.date >= start).filter(Measurement.date <= end).all()
+
     session.close()
-    temps=[]
 
+    return (
+        jsonify(results7)
+    )
 
-# @app.route("/api/v1.0/<start>/<end>")
-
-# def startendapp():
- 
 #     return (
 #         jsonify(hello_dic)
 #     )
