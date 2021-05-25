@@ -17,10 +17,10 @@ The goal of this project is to build a Flask application to do basic climate ana
 
 ### Precipitation Analysis
 
-For this analysis, 12 months of history of precipitation data were retrieved and laoded into a Pandas DataFrame.
+For this analysis, 12 months of history of precipitation data were retrieved and loaded into a Pandas DataFrame.
 
 Summary Statistics for precipitation useing Pandas:
-  ![precipitation](Images/precipitation.png)
+  ![precipitation](Images/describe.png)
   ![precipitation](Images/precipitation.png)
 
 ### Station Analysis
@@ -43,7 +43,7 @@ Plot of the min, avg, and max temperature from your previous query as a bar char
 
 ### Daily Rainfall Average
 
-Plot for daily normals storaged as Pandas DataFrames (normals are the averages for min, avg, and max temperatures)
+Plot for daily normals storeged as Pandas DataFrames (normals are the averages for min, avg, and max temperatures)
 
 Calculate the rainfall per weather station using the previous year's matching dates.
 
