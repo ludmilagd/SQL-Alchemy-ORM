@@ -2,38 +2,26 @@
 
 ## Objective
 
-The goal of this project is to build a Flask application to do basic climate analysis and data exploration of the sqlite database.
+The goal of this project is to build a Flask application to do basic climate analysis and data exploration of a sqlite database and create visuals to present the data.
 
 
 ## Technologies used
 
 #### Python, SQLAlchemy ORM queries, Flask, Weather API, Pandas, and Matplotlib.
 
-
 * SQLAlchemy used to connect to your sqlite database.
 
-* Use SQLAlchemy `automap_base()` to reflect tables into classes and save a reference to those classes.
+* SQLAlchemy `automap_base()` used to reflect tables into classes and save a reference to those classes.
 
 * Weather APIs (Application Programming Interfaces) to connect to large databases of weather forecast and historical information from the web.
 
 ### Precipitation Analysis
 
+For this analysis, 12 months of history of precipitation data were retrieved and laoded into a Pandas DataFrame.
 
-# Weather API
-
-* Design a query to retrieve the last 12 months of precipitation data.
-
-* Select only the `date` and `prcp` values.
-
-* Load the query results into a Pandas DataFrame and set the index to the date column.
-
-* Sort the DataFrame values by `date`.
-
-* Plot the results using the DataFrame `plot` method.
+Summary Statistics for precipitation useing Pandas:
 
   ![precipitation](Images/precipitation.png)
-
-* Use Pandas to print the summary statistics for the precipitation data.
 
 ### Station Analysis
 
