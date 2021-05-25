@@ -1,22 +1,25 @@
 # SQL Alchemy & Flask App Project
 
-### Objective
+## Objective
 
 The goal of this project is to build a Flask application to do basic climate analysis and data exploration of the sqlite database.
 
 
-## Step 1 - Technologies used
+## Technologies used
 
-Python, SQLAlchemy ORM queries, Flask, API, Pandas, and Matplotlib.
+#### Python, SQLAlchemy ORM queries, Flask, Weather API, Pandas, and Matplotlib.
 
 
-* Choose a start date and end date for your trip. Make sure that your vacation range is approximately 3-15 days total.
+* SQLAlchemy used to connect to your sqlite database.
 
-* Use SQLAlchemy `create_engine` to connect to your sqlite database.
+* Use SQLAlchemy `automap_base()` to reflect tables into classes and save a reference to those classes.
 
-* Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+* Weather APIs (Application Programming Interfaces) to connect to large databases of weather forecast and historical information from the web.
 
 ### Precipitation Analysis
+
+
+# Weather API
 
 * Design a query to retrieve the last 12 months of precipitation data.
 
@@ -91,17 +94,6 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
 
-## Hints
-
-* You will need to join the station and measurement tables for some of the queries.
-
-* Use Flask `jsonify` to convert your API data into a valid JSON response object.
-
-- - -
-
-## Bonus: Other Recommended Analyses
-
-* The following are optional challenge queries. These are highly recommended to attempt, but not required for the homework.
 
 ### Temperature Analysis I
 
@@ -119,11 +111,7 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
 * Use the `calc_temps` function to calculate the min, avg, and max temperatures for your trip using the matching dates from the previous year (i.e., use "2017-01-01" if your trip start date was "2018-01-01").
 
-* Plot the min, avg, and max temperature from your previous query as a bar chart.
-
-  * Use the average temperature as the bar height.
-
-  * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
+* Plot of the min, avg, and max temperature from your previous query as a bar chart.
 
     ![temperature](Images/temperature.png)
 
@@ -143,6 +131,3 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   ![daily-normals](Images/daily-normals.png)
 
-### Copyright
-
-Trilogy Education Services © 2020. All Rights Reserved.
