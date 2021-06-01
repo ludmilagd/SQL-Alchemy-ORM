@@ -71,14 +71,11 @@ query for the dates and temperature observations from a year from the last data 
 Return a JSON list of Temperature Observations (tobs) for the previous year.
 /api/v1.0/<start> and /api/v1.0/<start>/<end>
 
-![precipitation](Images/describe.png)
-  ![precipitation](Images/precipitation.png)
+![image](https://user-images.githubusercontent.com/70984918/120257232-71ab6a00-c255-11eb-8afc-4c22b54a82ed.png)
+  
 
 ### Station Analysis
 
 Histogram of 12 months of temperature observation data
-  ![station-histogram](Images/station-histogram.png)
-
-- - -
-    ![temperature](Images/temperature.png)
+![image](https://user-images.githubusercontent.com/70984918/120257247-7c65ff00-c255-11eb-8942-01ba26446a3c.png)
 
