@@ -1,4 +1,4 @@
-## SQLAlchemy and Flask Project
+## SQLAlchemy and Flask Application
 
 ### Objective:
 Use Python and SQLAlchemy ORM queries with provided hawaii.sqlite database to reflect tables into a new model and perform analysis of Hawaii climate.
